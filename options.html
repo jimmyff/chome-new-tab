@@ -1,0 +1,79 @@
+<html>
+<head>
+  <title>Pimp your 'New Tab'</title>
+  <style>
+    body {
+      padding:0;
+      margin:0;
+
+      background-color:#9013FE;
+      color:#fff;
+      padding:10px;
+      width:280px;
+    }
+    article {
+    text-align:center;
+    }
+    h1 {
+      margin:0 0 1em 0;
+      padding:0;
+      font-size:2em;
+      font-weight:300;
+    }
+    #icon {
+      width:50%;
+      max-width:200px;
+      margin:1em auto 1em auto;
+    }
+    input, button {
+      padding:10px;
+      border:0;
+      border-radius: 5px;
+      outline-color: #FF00DC;
+      font-size:1.1em;
+    }
+    button {
+
+      color:#54009E;
+      background-color:#fff;
+      font-weight:500;
+    }
+    input[type='text'] {
+      width:200px;
+      color:#fff;
+      background-color:#54009E;
+    }
+    hr {
+      width:50%;
+      max-width:250px;
+      size:1px;
+      margin:2em auto;
+    }
+    p {
+      font-size:1.4em;
+    }
+    #clearUrl {
+      margin-bottom:2em;
+      visibility: hidden;
+    }
+  </style>
+  <script src="options.js"></script>
+</head>
+<body>
+
+<article>
+  <img src="icon-128.png" id="icon" />
+  <h1>Pimp your 'New Tab'</h1>
+
+  <hr>
+  <p>URL to open:</p>
+  <input type="text" id="inputUrl"  class="input" placeholder="http://www.google.com">
+  <button id="buttonSave">Save</button>
+
+  <div id="clearUrl">
+    <hr>
+    <button id="buttonClear">Un-Pimp</button>
+  </div>
+</article>
+</body>
+</html>
