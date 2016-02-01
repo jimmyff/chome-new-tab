@@ -22,14 +22,10 @@ var writeUrl = function (newUrl) {
 
 // Update UI
 var updateUrlUi = function (storedUrl) {
-  console.log('update UI got URL: '+ storedUrl);
-  if (storedUrl) {
-      document.getElementById('inputUrl').value = storedUrl;
-      document.getElementById("clearUrl").style.visibility = "visible";
-  } else {
-       document.getElementById('inputUrl').value = "";
-       document.getElementById("clearUrl").style.visibility = "hidden";
-  }
+  document.getElementById('inputUrl').value = storedUrl?
+    storedUrl:"";
+  document.getElementById("clearUrl").style.visibility = storedUrl?
+    "visible":"hidden";
 }
 
 // Load URL
@@ -58,11 +54,17 @@ window.addEventListener('load', function(evt) {
     });
 
     // Handle save
-    document.getElementById('buttonSave').addEventListener('click', function (e) {
-      writeUrl(document.getElementById('inputUrl').value);
-    });
+    document.getElementById('buttonSave').addEventListener(
+      'click',
+      function (e) {
+        writeUrl(document.getElementById('inputUrl').value);
+      }
+    );
 
     // Handle clear
-    document.getElementById('buttonClear').addEventListener('click', clearUrl);
+    document.getElementById('buttonClear').addEventListener(
+      'click',
+      clearUrl
+    );
 
 });
